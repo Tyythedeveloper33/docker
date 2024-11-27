@@ -12,6 +12,8 @@ export default defineConfig(({ mode }) => ({
     })
   ],
   server: {
-    open: true
+   proxy:{
+    '/api':"http://backend:5000/",
+   }
   }
 }));
